@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"><title>ギガファイル便 保持期限設定</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; width: 300px; }
+    h1 { font-size: 1.2em; margin-bottom: 20px; }
+    label { display: block; margin-bottom: 10px; font-weight: bold; }
+    select { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+    button {
+      margin-top: 20px;
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #status {
+      margin-top: 15px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>ギガファイル便 保持期限設定</h1>
+  <label for="lifetimeSelect">保持期限を選択してください:</label>
+  <select id="lifetimeSelect">
+    <option value="3">3 日</option>
+    <option value="5">5 日</option>
+    <option value="7">7 日</option>
+    <option value="14">14 日</option>
+    <option value="30">30 日</option>
+    <option value="60">60 日</option>
+    <option value="100">100 日</option>
+  </select>
+  <button id="saveButton">保存</button>
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
