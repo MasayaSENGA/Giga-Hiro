@@ -11,10 +11,6 @@
   "permissions": [
     "storage"
   ],
-  "host_permissions": [
-    "https://gigafile.nu/*",
-    "https://gigafile.jp/*"
-  ],
   "content_scripts": [
     {
       "matches": ["https://gigafile.nu/*","https://gigafile.jp/*"],
