@@ -1,6 +1,4 @@
-const DEFAULT_LIFETIME = '5'; // popup.js のデフォルトと一致させること
-
-chrome.storage.sync.get({ gigafileLifetime: DEFAULT_LIFETIME }, function(data) {
+chrome.storage.sync.get({ gigafileLifetime: DEFAULT_SETTINGS.gigafileLifetime }, function(data) {
   const selectedLifetime = String(data.gigafileLifetime);
   const selector = `li[data-lifetime-val="${CSS.escape(selectedLifetime)}"]`;
 

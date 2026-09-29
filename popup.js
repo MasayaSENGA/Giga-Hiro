@@ -1,17 +1,20 @@
-const DEFAULT_LIFETIME = '5'; // content.js のデフォルトと一致させること
-
 document.addEventListener('DOMContentLoaded', function() {
-  const lifetimeSelect = document.getElementById('lifetimeSelect');
+  const gigafileLifetimeSelect = document.getElementById('gigafileLifetimeSelect');
+  const gigaWatasuDaysSelect = document.getElementById('gigaWatasuDaysSelect');
   const saveButton = document.getElementById('saveButton');
   const statusDiv = document.getElementById('status');
 
-  chrome.storage.sync.get({ gigafileLifetime: DEFAULT_LIFETIME }, function(data) {
-    lifetimeSelect.value = data.gigafileLifetime;
+  chrome.storage.sync.get(DEFAULT_SETTINGS, function(data) {
+    gigafileLifetimeSelect.value = data.gigafileLifetime;
+    gigaWatasuDaysSelect.value = data.gigaWatasuDays;
   });
 
   saveButton.addEventListener('click', function() {
-    const selectedValue = lifetimeSelect.value;
-    chrome.storage.sync.set({ gigafileLifetime: selectedValue }, function() {
+    const settings = {
+      gigafileLifetime: gigafileLifetimeSelect.value,
+      gigaWatasuDays: gigaWatasuDaysSelect.value
+    };
+    chrome.storage.sync.set(settings, function() {
       if (chrome.runtime.lastError) {
         statusDiv.textContent = '保存に失敗しました: ' + chrome.runtime.lastError.message;
         statusDiv.style.color = '#ef4444';

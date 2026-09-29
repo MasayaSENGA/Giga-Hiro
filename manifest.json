@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "ギガひろ",
-  "version": "3.2",
-  "description": "ギガファイル便の保持期限を自動設定します。",
+  "version": "4.0",
+  "description": "ギガファイル便の保持期限とギガワタスの保存日数を自動設定します。",
   "icons": {
     "16": "images/icon16.png",
     "48": "images/icon48.png",
@@ -14,7 +14,12 @@
   "content_scripts": [
     {
       "matches": ["https://gigafile.nu/*","https://gigafile.jp/*"],
-      "js": ["content.js"],
+      "js": ["settings.js", "content-gigafile.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://giga-watasu.jp/*"],
+      "js": ["settings.js", "content-gigawatasu.js"],
       "run_at": "document_idle"
     }
   ],
