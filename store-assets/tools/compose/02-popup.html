@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>02 popup</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  .popup-fig { left: 810px; top: 138px; }
+  .popup-fig img {
+    width: 420px; border-radius: 22px;
+    box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.06), 0 2px 4px rgba(15, 23, 42, 0.06), 0 30px 60px rgba(30, 58, 138, 0.25);
+  }
+  .popup-fig .ring { border-width: 3px; border-radius: 12px; }
+  .popup-fig .ring.btn { border-radius: 14px; }
+  .callout.c1 { left: 620px; }
+  .callout.c2 { left: 620px; }
+  .copy .note { margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="stage"></div>
+
+  <div class="brand" data-block="brand"><img src="build/icon128.png" alt=""><span class="name">ギガひろ</span></div>
+
+  <div class="copy" data-col="520" data-block="copy">
+    <div class="eyebrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.2"/><circle cx="10" cy="17" r="2.2"/></svg>
+      <span class="l">かんたん設定</span>
+    </div>
+    <h1 class="headline">
+      <span class="l">日数は</span>
+      <span class="l"><span class="mark">サービスごと</span>に設定</span>
+    </h1>
+    <p class="sub">
+      <span class="l">選んで「設定を保存」するだけ。</span>
+      <span class="l">Chromeの同期にも対応</span>
+    </p>
+    <div class="note">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 0 1-13.7 5.6"/><path d="M4 12A8 8 0 0 1 17.7 6.4"/><path d="M18 2.8v4h-4"/><path d="M6 21.2v-4h4"/></svg></span>
+      <span>
+        <span class="l">Chromeの同期（拡張機能）が有効な場合、</span>
+        <span class="l">ほかの端末にも同期</span>
+      </span>
+    </div>
+  </div>
+
+  <figure class="shot popup-fig" data-geom="popup_saved" data-block="popup">
+    <img src="build/popup_saved.png" alt="">
+    <div class="ring" data-box="dd1" data-pad="3"></div>
+    <div class="ring" data-box="dd2" data-pad="3"></div>
+    <div class="ring btn" data-box="save" data-pad="3"></div>
+  </figure>
+
+  <div class="callout c1" data-block="callout1"><span class="num">1</span><span class="l">日数を選ぶ</span></div>
+  <div class="callout c2" data-block="callout2"><span class="num">2</span><span class="l">設定を保存</span></div>
+
+  <div class="footnote" data-block="footnote">※非公式ツールです。ギガファイル便・ギガワタスの運営会社とは関係ありません。</div>
+</div>
+<script src="build/geometry.js"></script>
+<script>
+  window.layout = function (H) {
+    const fig = document.querySelector(".popup-fig");
+    const dd1 = H.boxRect(fig, "dd1"), dd2 = H.boxRect(fig, "dd2"), sv = H.boxRect(fig, "save");
+    const c1 = document.querySelector(".callout.c1"), c2 = document.querySelector(".callout.c2");
+    // vertical placement from the real pixel boxes
+    c1.style.top = ((dd1.cy + dd2.cy) / 2 - c1.offsetHeight / 2) + "px";
+    c2.style.top = (sv.cy - c2.offsetHeight / 2) + "px";
+    const r1 = H.rectOf(c1), r2 = H.rectOf(c2);
+    const o = { color: "#f59e0b", width: 3 };
+    const pad = 3 + 3;           // ring pad + ring border
+    const jx = r1.r + 26;        // junction of the fork
+    H.path(`M ${r1.r} ${r1.cy} H ${jx}`, o);
+    for (const d of [dd1, dd2]) {
+      H.path(`M ${jx} ${r1.cy} C ${jx + 18} ${r1.cy}, ${jx} ${d.cy}, ${jx + 20} ${d.cy} H ${d.x - pad}`, o);
+      H.dot(d.x - pad, d.cy, 4.5);
+    }
+    H.path(`M ${r2.r} ${r2.cy} H ${sv.x - pad}`, o);
+    H.dot(sv.x - pad, sv.cy, 4.5);
+  };
+</script>
+<script src="common.js"></script>
+</body>
+</html>

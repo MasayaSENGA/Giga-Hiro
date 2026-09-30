@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>05 privacy</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  .facts { position: absolute; left: 632px; top: 112px; width: 592px; }
+  .fact {
+    position: relative; display: flex; align-items: center; gap: 20px;
+    height: 124px; padding: 0 24px; margin-bottom: 16px;
+  }
+  .fact.card { position: relative; }
+  .fact .ic {
+    flex: none; width: 62px; height: 62px; border-radius: 18px;
+    background: linear-gradient(160deg, var(--blue-100), #cfe0fd);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .fact .ic svg { width: 32px; height: 32px; display: block; }
+  .fact .t { font-size: 22px; line-height: 1.4; font-weight: 800; color: var(--ink); letter-spacing: 0.01em; }
+  .fact .t .dom {
+    font-weight: 700; color: var(--blue-700); letter-spacing: 0;
+  }
+  .fact .d { margin-top: 4px; font-size: 17px; line-height: 1.55; font-weight: 500; color: var(--ink-2); }
+  .fact .t, .fact .d { font-feature-settings: "palt"; }
+  .fact .d code { font-family: inherit; font-weight: 700; color: var(--blue-700); letter-spacing: 0.02em; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="stage"></div>
+
+  <div class="brand" data-block="brand"><img src="build/icon128.png" alt=""><span class="name">ギガひろ</span></div>
+
+  <div class="copy" data-col="520" data-block="copy">
+    <div class="eyebrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v6c0 4.2 3 7.6 7 9 4-1.4 7-4.8 7-9V6Z"/><path d="m9 12 2 2 4-4"/></svg>
+      <span class="l">安心設計</span>
+    </div>
+    <h1 class="headline">
+      <span class="l">動くのは</span>
+      <span class="l">ギガファイル便と</span>
+      <span class="l">ギガワタス<span class="mark">だけ</span></span>
+    </h1>
+    <p class="sub">
+      <span class="l">権限は設定の保存と</span>
+      <span class="l">対象サイトへのアクセスだけ。</span>
+      <span class="l">外部送信・収集なし</span>
+    </p>
+  </div>
+
+  <div class="facts" data-block="facts">
+    <div class="card fact">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v6c0 4.2 3 7.6 7 9 4-1.4 7-4.8 7-9V6Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+      <div>
+        <div class="t l">権限は2種類だけ</div>
+        <div class="d">
+          <span class="l">設定の保存（<code>storage</code>）と</span>
+          <span class="l">対象サイトへのアクセス（期限の選択）</span>
+        </div>
+      </div>
+    </div>
+    <div class="card fact">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16.5V8m-3.6 3.4L12 7.8l3.6 3.6"/><path d="M5.6 5.6l12.8 12.8"/></svg></div>
+      <div>
+        <div class="t l">外部送信・アクセス解析なし</div>
+        <div class="d"><span class="l">閲覧履歴やファイルの情報も集めません</span></div>
+      </div>
+    </div>
+    <div class="card fact">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3Z"/></svg></div>
+      <div>
+        <div class="t l"><span class="dom">gigafile.nu</span> と <span class="dom">giga-watasu.jp</span> だけで動作</div>
+        <div class="d">
+          <span class="l">旧ドメインの <code>gigafile.jp</code> も対象ですが、</span>
+          <span class="l"><code>gigafile.nu</code> へ転送されるため、そこでは動作しません</span>
+        </div>
+      </div>
+    </div>
+    <div class="card fact">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 0 1-13.7 5.6"/><path d="M4 12A8 8 0 0 1 17.7 6.4"/><path d="M18 2.8v4h-4"/><path d="M6 21.2v-4h4"/></svg></div>
+      <div>
+        <div class="t l">設定は Chrome の同期に対応</div>
+        <div class="d">
+          <span class="l">同期（拡張機能）が有効な場合、ほかの端末にも同期</span>
+          <span class="l">保存するのは日数の設定2つだけ</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footnote" data-block="footnote">※非公式ツールです。ギガファイル便・ギガワタスの運営会社とは関係ありません。</div>
+</div>
+<script src="build/geometry.js"></script>
+<script>
+  window.layout = function (H) {
+    const facts = document.querySelector(".facts");
+    const stage = H.rectOf(document.querySelector(".stage"));
+    const last = facts.lastElementChild;
+    last.style.marginBottom = "0";
+    facts.style.top = (stage.y + (stage.h - facts.offsetHeight) / 2) + "px";
+    // every fact text must fit inside its card
+    facts.querySelectorAll(".fact").forEach((f) => {
+      const fr = f.getBoundingClientRect();
+      f.querySelectorAll(".l").forEach((l) => {
+        const r = document.createRange(); r.selectNodeContents(l);
+        const rr = r.getBoundingClientRect();
+        if (rr.right > fr.right - 16) H.issues.push("fact text too wide: " + l.textContent);
+      });
+    });
+  };
+</script>
+<script src="common.js"></script>
+</body>
+</html>

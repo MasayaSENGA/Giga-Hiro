@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>marquee</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  html, body { background: #1d4ed8; }
+  .canvas.marquee {
+    width: 1400px; height: 560px;
+    background:
+      radial-gradient(760px 480px at 8% -10%, rgba(96, 165, 250, 0.60), transparent 70%),
+      radial-gradient(640px 420px at 100% 110%, rgba(23, 37, 84, 0.60), transparent 70%),
+      linear-gradient(135deg, #2563eb 0%, #1d4ed8 55%, #1e40af 100%);
+  }
+  .marquee .deco {
+    position: absolute; border-radius: 50%; border: 40px solid rgba(255, 255, 255, 0.07);
+  }
+  .marquee .left { position: absolute; left: 104px; top: 0; height: 560px; display: flex; flex-direction: column; justify-content: center; }
+  .marquee .lockup { display: flex; align-items: center; gap: 30px; }
+  .marquee .lockup img {
+    width: 128px; height: 128px; display: block;
+    filter: drop-shadow(0 0 1px rgba(15, 23, 42, 0.35)) drop-shadow(0 14px 24px rgba(15, 23, 42, 0.45));
+  }
+  .marquee .name {
+    font-size: 100px; line-height: 1.05; font-weight: 800; color: #fff;
+    letter-spacing: 0.02em; font-feature-settings: "palt";
+    text-shadow: 0 6px 20px rgba(15, 23, 42, 0.25);
+  }
+  .marquee .tagline {
+    margin-top: 44px; font-size: 42px; line-height: 1.35; font-weight: 800; color: #fff;
+    letter-spacing: 0.02em; font-feature-settings: "palt";
+  }
+  .marquee .tagline .accent { color: var(--amber-400); }
+  .marquee .support {
+    margin-top: 18px; font-size: 22px; line-height: 1.4; font-weight: 600;
+    color: rgba(255, 255, 255, 0.84); letter-spacing: 0.04em; font-feature-settings: "palt";
+  }
+  .marquee .popup-fig { left: 996px; }
+  .marquee .popup-fig img {
+    width: 320px; border-radius: 16px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35), 0 30px 64px rgba(15, 23, 42, 0.50);
+  }
+</style>
+</head>
+<body>
+<div class="canvas marquee">
+  <div class="deco" style="left: 860px; top: -250px; width: 640px; height: 640px;"></div>
+  <div class="deco" style="left: 1040px; top: 330px; width: 420px; height: 420px; border-width: 30px;"></div>
+
+  <div class="left" data-block="copy">
+    <div class="lockup">
+      <img src="build/icon128.png" alt="">
+      <div class="name l">ギガひろ</div>
+    </div>
+    <div class="tagline l">開くだけで、<span class="accent">いつもの日数</span>を自動で選択</div>
+    <div class="support l">ギガファイル便・ギガワタス対応（非公式ツール）</div>
+  </div>
+
+  <figure class="shot popup-fig" data-geom="popup_saved" data-block="popup">
+    <img src="build/popup_saved.png" alt="">
+  </figure>
+</div>
+<script src="build/geometry.js"></script>
+<script>
+  window.layout = function () {
+    const fig = document.querySelector(".popup-fig");
+    fig.style.top = ((560 - fig.offsetHeight) / 2) + "px";
+  };
+</script>
+<script src="common.js"></script>
+</body>
+</html>

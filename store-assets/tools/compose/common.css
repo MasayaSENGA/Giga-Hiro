@@ -1,0 +1,289 @@
+/* ギガひろ Chrome Web Store assets - shared styles.
+   Layout is authored in CSS pixels at the final size (e.g. 1280x800) and rendered
+   with deviceScaleFactor=2, then downsampled with LANCZOS by render_assets.py.
+   build/font.css is written by render_assets.py (--font, default Noto Sans JP VF) and
+   declares the "GH Sans" face used below. */
+@import url("build/font.css");
+
+
+:root {
+  --blue-50: #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-800: #1e40af;
+  --blue-900: #1e3a8a;
+  --amber-200: #fde68a;
+  --amber-300: #fcd34d;
+  --amber-400: #fbbf24;
+  --amber-500: #f59e0b;
+  --ink: #0f172a;
+  --ink-2: #475569;
+  --ink-3: #64748b;
+  --line: #e2e8f0;
+  --page: #f4f7fc;
+  --col-left: 72px;
+  --col-width: 520px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--page);
+}
+
+body {
+  font-family: "GH Sans", sans-serif;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+  word-break: keep-all;
+  line-break: strict;
+  overflow-wrap: normal;
+}
+
+/* Every text line is its own block and never wraps on its own:
+   line breaks are always explicit (no orphaned characters). */
+.l { display: block; white-space: nowrap; }
+.nw { white-space: nowrap; }
+
+.canvas {
+  position: relative;
+  width: 1280px;
+  height: 800px;
+  overflow: hidden;
+  background: var(--page);
+}
+
+/* ---------- brand row (screens 2-5) ---------- */
+.brand {
+  position: absolute;
+  left: var(--col-left);
+  top: 52px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.brand img { width: 40px; height: 40px; display: block; }
+.brand .name {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+
+/* ---------- copy column ---------- */
+.copy {
+  position: absolute;
+  left: var(--col-left);
+  top: 148px;
+  width: var(--col-width);
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 34px;
+  padding: 0 16px 0 12px;
+  border-radius: 999px;
+  background: var(--blue-100);
+  color: var(--blue-700);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.eyebrow svg { width: 18px; height: 18px; display: block; }
+.headline {
+  margin: 16px 0 0;
+  font-size: 56px;
+  line-height: 1.3;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  font-feature-settings: "palt";
+  color: var(--ink);
+}
+.headline .mark {
+  background: linear-gradient(transparent 64%, var(--amber-200) 64%, var(--amber-200) 92%, transparent 92%);
+  padding: 0 2px;
+  margin: 0 -2px;
+}
+.sub {
+  margin: 20px 0 0;
+  font-size: 26px;
+  line-height: 1.6;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-feature-settings: "palt";
+  color: var(--ink-2);
+}
+
+/* ---------- right-hand stage (screens 2-5) ---------- */
+.stage {
+  position: absolute;
+  left: 600px;
+  top: 24px;
+  width: 656px;
+  height: 704px;
+  border-radius: 32px;
+  background:
+    radial-gradient(560px 380px at 88% 4%, rgba(59, 130, 246, 0.18), transparent 70%),
+    radial-gradient(480px 360px at 0% 100%, rgba(191, 219, 254, 0.55), transparent 70%),
+    linear-gradient(160deg, #e6efff 0%, #d8e5fd 100%);
+  overflow: hidden;
+}
+.stage::before {
+  /* faint clock-face ring, echoing the icon */
+  content: "";
+  position: absolute;
+  right: -120px;
+  top: -120px;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  border: 28px solid rgba(255, 255, 255, 0.35);
+}
+
+/* ---------- footnote (required on every screenshot) ---------- */
+.footnote {
+  /* 18px / #475569 on #f4f7fc = 7.1:1, still ~9px when the store shows it at half size */
+  position: absolute;
+  left: var(--col-left);
+  bottom: 24px;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+/* caption under a capture: which setting the capture shows */
+.fig-cap {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--blue-800);
+  font-feature-settings: "palt";
+  white-space: nowrap;
+}
+.fig-cap svg { width: 18px; height: 18px; display: block; flex: none; }
+
+/* ---------- screenshot figures ---------- */
+.shot {
+  position: absolute;
+  margin: 0;
+}
+.shot > img {
+  display: block;
+  position: relative;
+}
+.shot.framed > img {
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.10), 0 18px 40px rgba(30, 58, 138, 0.20);
+}
+
+.card {
+  position: absolute;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08), 0 18px 40px rgba(30, 58, 138, 0.18);
+}
+
+/* ---------- emphasis: ring + chip + wires (drawn outside the selected option) ---------- */
+.ring {
+  position: absolute;
+  z-index: 6;
+  border: 4px solid var(--amber-500);
+  border-radius: 12px;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.95), 0 4px 12px rgba(245, 158, 11, 0.30);
+  pointer-events: none;
+}
+.chip {
+  position: absolute;
+  z-index: 7;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 16px 0 12px;
+  border-radius: 999px;
+  background: var(--blue-900);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.28);
+}
+.chip svg { width: 18px; height: 18px; display: block; }
+.wires {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  pointer-events: none;
+  overflow: visible;
+}
+
+/* numbered callouts (screen 2) */
+.callout {
+  position: absolute;
+  z-index: 7;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 48px;
+  padding: 0 18px 0 8px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08), 0 10px 24px rgba(30, 58, 138, 0.18);
+}
+.callout .num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--amber-400);
+  color: var(--blue-900);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* small labelled note rows */
+.note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 18px;
+  line-height: 1.55;
+  font-weight: 500;
+  color: var(--ink-2);
+  font-feature-settings: "palt";
+}
+.note .ic {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--blue-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.note .ic svg { width: 20px; height: 20px; display: block; }

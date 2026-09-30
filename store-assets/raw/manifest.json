@@ -1,0 +1,383 @@
+{
+  "shots": [
+    {
+      "file": "gigafile_before_viewport.png",
+      "width": 2560,
+      "height": 1600,
+      "dpr": 2,
+      "description": "ギガファイル便 gigafile.nu アップロード欄までスクロールした 1280x800 ビューポート全体 / 拡張なし（サイト既定） / 保持期限表示=5日（右側・下端に第三者の固定広告あり）"
+    },
+    {
+      "file": "gigafile_before_lifetime_crop.png",
+      "width": 1020,
+      "height": 156,
+      "dpr": 2,
+      "description": "ギガファイル便 保持期限変更バー（#lifetime_meter_box, ul#lifetime_divisions の親）を余白24pxでクロップ / 拡張なし（サイト既定）",
+      "crop_box_px": [
+        748,
+        252,
+        1768,
+        408
+      ],
+      "source": "gigafile_before_viewport.png"
+    },
+    {
+      "file": "gigafile_before_upload_panel_crop.png",
+      "width": 1000,
+      "height": 793,
+      "dpr": 2,
+      "description": "ギガファイル便 アップロードパネル（保持期限バー〜ドロップ欄〜ファイル選択ボタン）をクロップ / 拡張なし（サイト既定）",
+      "crop_box_px": [
+        748,
+        272,
+        1748,
+        1065
+      ],
+      "source": "gigafile_before_viewport.png"
+    },
+    {
+      "file": "gigafile_before_upload_box_crop.png",
+      "width": 1080,
+      "height": 1231,
+      "dpr": 2,
+      "description": "ギガファイル便 アップロード枠全体（#contents_box：新着情報・タブ・保持期限バー・ドロップ欄）をクロップ / 拡張なし（サイト既定）",
+      "crop_box_px": [
+        708,
+        26,
+        1788,
+        1257
+      ],
+      "source": "gigafile_before_viewport.png"
+    },
+    {
+      "file": "watasu_before_viewport.png",
+      "width": 2560,
+      "height": 1600,
+      "dpr": 2,
+      "description": "ギガワタス giga-watasu.jp/upload アップロード設定までスクロールした 1280x800 ビューポート全体 / 拡張なし（サイト既定） / 選択中=['7日']（左に第三者の広告枠あり）"
+    },
+    {
+      "file": "watasu_before_days_crop.png",
+      "width": 1264,
+      "height": 232,
+      "dpr": 2,
+      "description": "ギガワタス「共有期限」の日数ボタン群を余白24pxでクロップ / 拡張なし（サイト既定）",
+      "crop_box_px": [
+        678,
+        832,
+        1942,
+        1064
+      ],
+      "source": "watasu_before_viewport.png"
+    },
+    {
+      "file": "watasu_before_settings_crop.png",
+      "width": 1308,
+      "height": 984,
+      "dpr": 2,
+      "description": "ギガワタス「アップロード設定」ブロック全体をクロップ / 拡張なし（サイト既定）",
+      "crop_box_px": [
+        626,
+        560,
+        1934,
+        1544
+      ],
+      "source": "watasu_before_viewport.png"
+    },
+    {
+      "file": "popup_saved.png",
+      "width": 640,
+      "height": 726,
+      "dpr": 2,
+      "description": "ポップアップ「ギガひろの設定」: ギガファイル便 14日 / ギガワタス 30日 を選び「設定を保存」を押した直後（『設定を保存しました！』表示）。body 320px をクロップ",
+      "crop_box_px": [
+        0,
+        0,
+        640,
+        726
+      ]
+    },
+    {
+      "file": "popup_loaded.png",
+      "width": 640,
+      "height": 722,
+      "dpr": 2,
+      "description": "ポップアップ「ギガひろの設定」を開き直し、保存済みの設定（ギガファイル便 14日 / ギガワタス 30日）が読み込まれた状態。body 320px をクロップ",
+      "crop_box_px": [
+        0,
+        0,
+        640,
+        722
+      ]
+    },
+    {
+      "file": "watasu_spa_before_top_viewport.png",
+      "width": 2560,
+      "height": 1600,
+      "dpr": 2,
+      "description": "ギガワタス トップページ giga-watasu.jp/（1280x800 ファーストビュー）。ギガひろ有効。ここからヘッダーの「アップロード」リンクで /upload へ SPA 遷移する直前"
+    },
+    {
+      "file": "watasu_spa_after_viewport.png",
+      "width": 2560,
+      "height": 1600,
+      "dpr": 2,
+      "description": "ギガワタス トップページのリンク「アップロード」から SPA 遷移した直後、ギガひろが 30日 を自動選択（1280x800 ビューポート全体）/ 選択中=['30日']"
+    },
+    {
+      "file": "watasu_spa_after_days_crop.png",
+      "width": 1264,
+      "height": 232,
+      "dpr": 2,
+      "description": "ギガワタス「共有期限」の日数ボタン群を余白24pxでクロップ / トップページのリンク「アップロード」から SPA 遷移した直後、ギガひろが 30日 を自動選択",
+      "crop_box_px": [
+        678,
+        832,
+        1942,
+        1064
+      ],
+      "source": "watasu_spa_after_viewport.png"
+    },
+    {
+      "file": "watasu_spa_after_settings_crop.png",
+      "width": 1308,
+      "height": 984,
+      "dpr": 2,
+      "description": "ギガワタス「アップロード設定」ブロック全体をクロップ / トップページのリンク「アップロード」から SPA 遷移した直後、ギガひろが 30日 を自動選択",
+      "crop_box_px": [
+        626,
+        560,
+        1934,
+        1544
+      ],
+      "source": "watasu_spa_after_viewport.png"
+    },
+    {
+      "file": "watasu_after_viewport.png",
+      "width": 2560,
+      "height": 1600,
+      "dpr": 2,
+      "description": "ギガワタス giga-watasu.jp/upload アップロード設定までスクロールした 1280x800 ビューポート全体 / ギガひろが 30日 を自動選択 / 選択中=['30日']（左に第三者の広告枠あり）"
+    },
+    {
+      "file": "watasu_after_days_crop.png",
+      "width": 1264,
+      "height": 232,
+      "dpr": 2,
+      "description": "ギガワタス「共有期限」の日数ボタン群を余白24pxでクロップ / ギガひろが 30日 を自動選択",
+      "crop_box_px": [
+        678,
+        832,
+        1942,
+        1064
+      ],
+      "source": "watasu_after_viewport.png"
+    },
+    {
+      "file": "watasu_after_settings_crop.png",
+      "width": 1308,
+      "height": 984,
+      "dpr": 2,
+      "description": "ギガワタス「アップロード設定」ブロック全体をクロップ / ギガひろが 30日 を自動選択",
+      "crop_box_px": [
+        626,
+        560,
+        1934,
+        1544
+      ],
+      "source": "watasu_after_viewport.png"
+    },
+    {
+      "file": "gigafile_after_viewport.png",
+      "width": 2560,
+      "height": 1600,
+      "dpr": 2,
+      "description": "ギガファイル便 gigafile.nu アップロード欄までスクロールした 1280x800 ビューポート全体 / ギガひろが 14日 を自動選択 / 保持期限表示=14日（右側・下端に第三者の固定広告あり）"
+    },
+    {
+      "file": "gigafile_after_lifetime_crop.png",
+      "width": 1020,
+      "height": 156,
+      "dpr": 2,
+      "description": "ギガファイル便 保持期限変更バー（#lifetime_meter_box, ul#lifetime_divisions の親）を余白24pxでクロップ / ギガひろが 14日 を自動選択",
+      "crop_box_px": [
+        748,
+        252,
+        1768,
+        408
+      ],
+      "source": "gigafile_after_viewport.png"
+    },
+    {
+      "file": "gigafile_after_upload_panel_crop.png",
+      "width": 1000,
+      "height": 793,
+      "dpr": 2,
+      "description": "ギガファイル便 アップロードパネル（保持期限バー〜ドロップ欄〜ファイル選択ボタン）をクロップ / ギガひろが 14日 を自動選択",
+      "crop_box_px": [
+        748,
+        272,
+        1748,
+        1065
+      ],
+      "source": "gigafile_after_viewport.png"
+    },
+    {
+      "file": "gigafile_after_upload_box_crop.png",
+      "width": 1080,
+      "height": 1231,
+      "dpr": 2,
+      "description": "ギガファイル便 アップロード枠全体（#contents_box：新着情報・タブ・保持期限バー・ドロップ欄）をクロップ / ギガひろが 14日 を自動選択",
+      "crop_box_px": [
+        708,
+        26,
+        1788,
+        1257
+      ],
+      "source": "gigafile_after_viewport.png"
+    }
+  ],
+  "console": [
+    {
+      "where": "watasu_spa",
+      "text": "ギガワタス: 保存日数を 30 日に設定しました。"
+    },
+    {
+      "where": "watasu_after",
+      "text": "ギガワタス: 保存日数を 30 日に設定しました。"
+    },
+    {
+      "where": "gigafile_after",
+      "text": "ギガファイル便: 保持期限を 14 日に設定しました。"
+    }
+  ],
+  "notes": [
+    "Extensions.loadUnpacked OK: id=dncomgjgojnloidcbngbljgjailkipna"
+  ],
+  "started": "2026-09-29T22:37:39",
+  "values": {
+    "gigafileLifetime": "14",
+    "gigaWatasuDays": "30"
+  },
+  "viewport": [
+    1280,
+    800
+  ],
+  "dpr": 2,
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/153.0.8010.53",
+    "revision": "@792bf6722e73a45aa9e47c163b9901bdc17f3230",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "jsVersion": "15.3.76.13"
+  },
+  "gigafile_before": {
+    "options": [
+      "3",
+      "5",
+      "7",
+      "14",
+      "30",
+      "60",
+      "100"
+    ],
+    "text": "5日",
+    "meter": "width: 14%; margin-left: 44.1406px;",
+    "in_panel_ad": false,
+    "load_attempts": 1,
+    "rejected_loads": []
+  },
+  "watasu_before": {
+    "path": "/upload",
+    "options": [
+      "3日",
+      "5日",
+      "7日",
+      "14日",
+      "30日",
+      "60日",
+      "90日",
+      "111日"
+    ],
+    "selected": [
+      "7日"
+    ],
+    "load_attempts": 1,
+    "rejected_loads": []
+  },
+  "method": "extension",
+  "extension_id": "dncomgjgojnloidcbngbljgjailkipna",
+  "popup_values_after_reload": {
+    "g": "14",
+    "w": "30"
+  },
+  "watasu_spa": {
+    "link_text": "アップロード",
+    "navigation_events": [
+      "Page.navigatedWithinDocument"
+    ],
+    "spa": true,
+    "state": {
+      "path": "/upload",
+      "options": [
+        "3日",
+        "5日",
+        "7日",
+        "14日",
+        "30日",
+        "60日",
+        "90日",
+        "111日"
+      ],
+      "selected": [
+        "30日"
+      ]
+    },
+    "load_attempts": 1,
+    "rejected_loads": [],
+    "content_script_console": [
+      "ギガワタス: 保存日数を 30 日に設定しました。"
+    ]
+  },
+  "watasu_after": {
+    "path": "/upload",
+    "options": [
+      "3日",
+      "5日",
+      "7日",
+      "14日",
+      "30日",
+      "60日",
+      "90日",
+      "111日"
+    ],
+    "selected": [
+      "30日"
+    ],
+    "load_attempts": 1,
+    "rejected_loads": [],
+    "content_script_console": [
+      "ギガワタス: 保存日数を 30 日に設定しました。"
+    ]
+  },
+  "gigafile_after": {
+    "options": [
+      "3",
+      "5",
+      "7",
+      "14",
+      "30",
+      "60",
+      "100"
+    ],
+    "text": "14日",
+    "meter": "width: 14%; margin-left: 132.328px;",
+    "in_panel_ad": false,
+    "load_attempts": 1,
+    "rejected_loads": [],
+    "content_script_console": [
+      "ギガファイル便: 保持期限を 14 日に設定しました。"
+    ]
+  },
+  "finished": "2026-09-29T22:38:21"
+}

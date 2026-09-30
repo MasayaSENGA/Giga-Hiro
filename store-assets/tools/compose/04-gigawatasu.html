@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>04 gigawatasu</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  /* right: the site's 共有期限 row + パスワード保護 (crop), chip and wire outside the capture */
+  .settings-card { left: 608px; top: 0; width: 640px; padding: 12px; }
+  .settings-card .shot { position: relative; }
+  .settings-card .shot img { width: 616px; }
+  .settings-card .ring { border-radius: 14px; }
+
+  .flow { margin-top: 34px; width: 496px; height: 230px; position: relative; }
+  .flow.card { position: relative; }
+  .flow .scr { position: absolute; top: 22px; width: 150px; text-align: center; }
+  .flow .scr svg { width: 150px; height: 103px; display: block; }
+  .flow .scr .cap { margin-top: 8px; font-size: 18px; font-weight: 800; color: var(--ink); }
+  .flow .scr.a { left: 24px; }
+  .flow .scr.b { right: 24px; }
+  .flow .arrow { position: absolute; left: 182px; top: 52px; width: 132px; height: 44px; }
+  .flow .how {
+    position: absolute; left: 0; right: 0; bottom: 22px;
+    display: flex; justify-content: center; align-items: center; gap: 8px;
+    font-size: 16px; font-weight: 700; color: var(--blue-700);
+    font-feature-settings: "palt";
+  }
+  .flow .how svg { width: 18px; height: 18px; display: block; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="stage"></div>
+
+  <div class="brand" data-block="brand"><img src="build/icon128.png" alt=""><span class="name">ギガひろ</span></div>
+
+  <div class="copy" data-col="520" data-block="copy">
+    <div class="eyebrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h13"/><path d="m12.5 6.5 5.5 5.5-5.5 5.5"/><path d="M21 5v14"/></svg>
+      <span class="l">ギガワタス</span>
+    </div>
+    <h1 class="headline">
+      <span class="l">ギガワタスは</span>
+      <span class="l"><span class="mark">画面を移っても</span>選択</span>
+    </h1>
+    <p class="sub">
+      <span class="l">サイト内でアップロード画面へ</span>
+      <span class="l">移るたびに、共有期限を選択</span>
+    </p>
+
+    <div class="card flow">
+      <div class="scr a">
+        <svg viewBox="0 0 150 103" fill="none">
+          <rect x="1.5" y="1.5" width="147" height="100" rx="11" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+          <path d="M1.5 12.5a11 11 0 0 1 11-11h125a11 11 0 0 1 11 11V24H1.5Z" fill="#e2e8f0"/>
+          <circle cx="13" cy="13" r="3" fill="#94a3b8"/><circle cx="23" cy="13" r="3" fill="#94a3b8"/><circle cx="33" cy="13" r="3" fill="#94a3b8"/>
+          <rect x="14" y="36" width="44" height="9" rx="4.5" fill="#cbd5e1"/>
+          <rect x="94" y="35" width="42" height="12" rx="6" fill="#3b82f6"/>
+          <rect x="14" y="58" width="122" height="7" rx="3.5" fill="#e2e8f0"/>
+          <rect x="14" y="72" width="104" height="7" rx="3.5" fill="#e2e8f0"/>
+          <rect x="14" y="86" width="80" height="7" rx="3.5" fill="#e2e8f0"/>
+          <path d="M116 45.5v17.5l4.2-4.1 3.1 6.8 3.2-1.5-3.1-6.7 5.9-.3Z" fill="#0f172a" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/>
+        </svg>
+        <div class="cap l">トップページ</div>
+      </div>
+      <svg class="arrow" viewBox="0 0 132 44" fill="none">
+        <path d="M8 22h102" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+        <path d="M101 10.5 120 22l-19 11.5Z" fill="#f59e0b" stroke="#f59e0b" stroke-width="3" stroke-linejoin="round"/>
+      </svg>
+      <div class="scr b">
+        <svg viewBox="0 0 150 103" fill="none">
+          <rect x="1.5" y="1.5" width="147" height="100" rx="11" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+          <path d="M1.5 12.5a11 11 0 0 1 11-11h125a11 11 0 0 1 11 11V24H1.5Z" fill="#e2e8f0"/>
+          <circle cx="13" cy="13" r="3" fill="#94a3b8"/><circle cx="23" cy="13" r="3" fill="#94a3b8"/><circle cx="33" cy="13" r="3" fill="#94a3b8"/>
+          <rect x="14" y="33" width="122" height="34" rx="7" fill="#eff6ff" stroke="#93c5fd" stroke-width="2" stroke-dasharray="5 4"/>
+          <path d="M75 59V42m-6.5 6.5L75 42l6.5 6.5" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="14" y="78" width="20" height="13" rx="6.5" fill="#e2e8f0"/>
+          <rect x="39" y="78" width="20" height="13" rx="6.5" fill="#e2e8f0"/>
+          <rect x="64" y="78" width="20" height="13" rx="6.5" fill="#e2e8f0"/>
+          <rect x="89" y="78" width="22" height="13" rx="6.5" fill="#2563eb"/>
+          <rect x="86.5" y="75.5" width="27" height="18" rx="9" stroke="#f59e0b" stroke-width="2.5"/>
+          <rect x="118" y="78" width="18" height="13" rx="6.5" fill="#e2e8f0"/>
+        </svg>
+        <div class="cap l">アップロード画面</div>
+      </div>
+      <div class="how">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>
+        <span class="l">サイト内のリンクでアップロード画面へ</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card settings-card" data-block="settings">
+    <figure class="shot" data-geom="wt_settings_spa">
+      <img src="build/wt_settings_spa.png" alt="">
+      <div class="ring" data-box="cell" data-pad="5"></div>
+    </figure>
+  </div>
+
+  <div class="chip" data-block="chip">
+    <svg viewBox="0 0 24 24"><path d="M13.5 2 5 13.5h6L9.8 22 19 10h-6.2L13.5 2Z" fill="#fbbf24"/></svg>
+    <span class="l">ギガひろが自動で選択</span>
+  </div>
+
+  <div class="fig-cap" data-block="caption">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.2"/><circle cx="10" cy="17" r="2.2"/></svg>
+    <span class="l">ギガひろで共有期限を30日に設定した場合</span>
+  </div>
+
+  <div class="footnote" data-block="footnote">※非公式ツールです。ギガファイル便・ギガワタスの運営会社とは関係ありません。</div>
+</div>
+<script src="build/geometry.js"></script>
+<script>
+  window.layout = function (H) {
+    const stage = H.rectOf(document.querySelector(".stage"));
+    const card = document.querySelector(".settings-card");
+    const fig = card.querySelector(".shot");
+    const chip = document.querySelector(".chip");
+    const cap = document.querySelector(".fig-cap");
+    const ringOut = 5 + 4;                       // ring pad + ring border
+    const chipGap = 22;                          // chip bottom -> card top
+    const capGap = 22;
+    // chip + card + caption as one group, centred in the stage
+    const above = chip.offsetHeight + chipGap;
+    const groupH = above + card.offsetHeight + capGap + cap.offsetHeight;
+    const top = stage.y + (stage.h - groupH) / 2;
+    card.style.top = (top + above) + "px";
+    const cell = H.boxRect(fig, "cell");
+    const ringTop = cell.y - ringOut;
+    const cr = H.rectOf(card);
+    // the chip sits above the card (outside the capture); only the ring is on the capture.
+    // The wire drops straight onto the ring over the blank area above the 30日 button.
+    chip.style.left = (cell.cx - chip.offsetWidth / 2) + "px";
+    chip.style.top = (cr.y - chipGap - chip.offsetHeight) + "px";
+    const c = H.rectOf(chip);
+    if (c.b > cr.y - 0.5) H.issues.push("chip overlaps the settings card");
+    H.path(`M ${cell.cx} ${c.b} V ${ringTop - 2}`, { color: "#f59e0b", width: 3 });
+    H.dot(cell.cx, ringTop - 2, 4.5);
+    cap.style.left = cr.x + "px";
+    cap.style.top = (cr.b + capGap) + "px";
+  };
+</script>
+<script src="common.js"></script>
+</body>
+</html>
