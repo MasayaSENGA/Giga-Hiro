@@ -58,11 +58,20 @@ https://chromewebstore.google.com/detail/dfapbkmcfoglkkmabpdcggffhamgolkd
 | `content-gigafile.js` | ギガファイル便のページで保持期限を自動選択するコンテンツスクリプト |
 | `content-gigawatasu.js` | ギガワタスのページに常駐し、保存日数ボタンを自動選択するコンテンツスクリプト |
 | `images/` | 拡張機能アイコン |
+| `scripts/package.ps1` | Chrome ウェブストアにアップロードする ZIP を `dist/` に作るスクリプト |
 
 ## 権限
 
 - `storage`: 保持期限（保存日数）の設定を保存・同期するために使用します。
 - コンテンツスクリプトは `gigafile.nu` / `gigafile.jp` / `giga-watasu.jp` のページでのみ動作します。
+
+## Chrome ウェブストアへの提出
+
+アップロード用の ZIP は、リポジトリのルートで次のコマンドを実行すると `dist/giga-hiro-v<version>.zip` に作成されます（`dist/` は Git の管理対象外）。掲載情報と提出前のチェックリストは [store-assets/listing.md](store-assets/listing.md) にまとめています。
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\package.ps1
+```
 
 ## プライバシーポリシー
 
