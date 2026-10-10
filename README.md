@@ -30,7 +30,7 @@ https://chromewebstore.google.com/detail/dfapbkmcfoglkkmabpdcggffhamgolkd
 
 ### 開発者モードで読み込む
 
-このリポジトリは非公開です。開発中のコードを試すときは、手元のフォルダを読み込みます。
+ストアを使わずに開発中のコードを試すときは、次の手順で読み込みます。
 
 1. このリポジトリをクローンする
 2. Chromeで `chrome://extensions` を開く
@@ -59,6 +59,10 @@ https://chromewebstore.google.com/detail/dfapbkmcfoglkkmabpdcggffhamgolkd
 | `content-gigawatasu.js` | ギガワタスのページに常駐し、保存日数ボタンを自動選択するコンテンツスクリプト |
 | `images/` | 拡張機能アイコン |
 | `scripts/package.ps1` | Chrome ウェブストアにアップロードする ZIP を `dist/` に作るスクリプト |
+| `store-assets/` | Chrome ウェブストアの掲載画像（スクリーンショット・プロモーション画像・ストア用アイコン）と、その作成ツール（`tools/`） |
+| `LICENSE` | ライセンス（MIT） |
+
+掲載画像の素材として撮影した画面（`store-assets/raw/*.png`）は、ギガファイル便・ギガワタスの画面そのものなので、リポジトリには含めていません。画像を作り直すときは、先に `store-assets/tools/capture_raw.py` で撮影してください。
 
 ## 権限
 
@@ -67,7 +71,7 @@ https://chromewebstore.google.com/detail/dfapbkmcfoglkkmabpdcggffhamgolkd
 
 ## Chrome ウェブストアへの提出
 
-アップロード用の ZIP は、リポジトリのルートで次のコマンドを実行すると `dist/giga-hiro-v<version>.zip` に作成されます（`dist/` は Git の管理対象外）。掲載情報と提出前のチェックリストは [store-assets/listing.md](store-assets/listing.md) にまとめています。
+アップロード用の ZIP は、リポジトリのルートで次のコマンドを実行すると `dist/giga-hiro-v<version>.zip` に作成されます（`dist/` は Git の管理対象外）。
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\package.ps1
@@ -80,3 +84,7 @@ https://privacy.love-live.jp/ で公開しています。全拡張機能で共�
 ## バージョン
 
 現在のバージョン: 4.0.1（`manifest.json` を参照。Chrome ウェブストアで公開中の版は 4.0。4.0.1 は 4.0 から機能の変更がなく、まだ提出していません）
+
+## ライセンス
+
+[MIT](LICENSE)

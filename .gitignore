@@ -3,3 +3,10 @@ Giga-Hiro.zip
 
 # package.ps1 の出力先
 dist/
+
+# Chrome ウェブストアの掲載作業用の資料（手元だけで管理し、リポジトリには入れない）
+store-assets/listing.md
+
+# 掲載画像の撮影素材（第三者サイトの画面のため、リポジトリには入れない。
+# store-assets/tools/capture_raw.py で作る。撮影ログの manifest.json は管理する）
+store-assets/raw/*.png
